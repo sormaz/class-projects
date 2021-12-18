@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>braduProject3</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>labimp</name>
+			<type>2</type>
+			<location>C:/Work/Adrian&apos;s Documents/Courses&amp;research/Courses/ISE589/ISE589 Workspace/ISE 589_Fall 2007/bin/package1/labimp</location>
+		</link>
+	</linkedResources>
+</projectDescription>

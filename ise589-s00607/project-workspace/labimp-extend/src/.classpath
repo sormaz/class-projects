@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/java3d"/>
+	<classpathentry kind="lib" path="J:/user/labimp/implannerFolder/labimp-basis/labimp-basis.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/vrml"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/saxxml"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

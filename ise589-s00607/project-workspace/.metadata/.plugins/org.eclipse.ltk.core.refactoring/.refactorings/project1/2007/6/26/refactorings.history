@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename type 'p2.MyButton' to 'printbutton'&#13;&#10;- Original element: 'p2.MyButton'&#13;&#10;- Renamed element: 'p2.printbutton'&#13;&#10;- Update references to refactored element&#13;&#10;- Update textual occurrences in comments and strings" description="Rename type 'MyButton'" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/&lt;p2{MyButton.java[MyButton" matchStrategy="1" name="printbutton" qualified="false" references="true" similarDeclarations="false" stamp="1182896031671" textual="false" version="1.0"/>
+</session>

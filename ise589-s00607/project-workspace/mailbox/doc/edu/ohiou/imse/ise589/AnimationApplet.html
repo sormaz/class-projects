@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class edu.ohiou.imse.ise589.AnimationApplet</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">edu.ohiou.imse.ise589</FONT>
+<BR>Class AnimationApplet</H2>
+<DL>
+<DT>public class <B>AnimationApplet</B><DT>extends JApplet<DT>implements Runnable
+</DL>
+<DL><DD>Class for demonstration of animation procedure in applets and frames The class extends JApplet to ebable execution in both browser and stand alone and implements Runnable to perform animation in a separate thread. The class accepts two integer parameters from html page INCREMENT- to spacify number of pixels for increment for aniamtion SLEEP_TIME - to specify numebr of miliseconds for delay between two subsequent paintings<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B>
+</FONT></TD></TR></TABLE>
+
+<H3>run</H3>
+<PRE>
+public void <B>run</B>()</PRE>
+<DL><DD>Run method invoked from Thread for controling animation repaints the applet and then delays for given time<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<H3>paint</H3>
+<PRE>
+public void <B>paint</B>(Graphics&nbsp;g)</PRE>
+<DL><DD>Method for painting the content of the applet. Clears the applet for animation and then paints oval of a current size and author's name<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>g</CODE> - </DD>
+</DL>
+<HR>
+
+</BODY>
+</HTML>

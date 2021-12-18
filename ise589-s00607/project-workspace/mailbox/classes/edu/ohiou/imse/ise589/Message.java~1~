@@ -1,0 +1,26 @@
+package edu.ohiou.imse.ise589;
+/**
+ * Title:
+ * Description:
+ * Copyright:    Copyright (c) 2002
+ * Company:
+ * @author D N Sormaz
+ * @version 1.0
+ */
+import edu.ohiou.implanner.impClasses.Viewable;
+
+
+public abstract class Message implements Viewable {
+  public Message(String from) {
+    sender = from;
+    timestamp = System.currentTimeMillis();
+  }
+
+  public abstract void play();
+  public String getSender() {
+    return sender;
+  }
+
+  private String sender;
+  private long timestamp;
+}

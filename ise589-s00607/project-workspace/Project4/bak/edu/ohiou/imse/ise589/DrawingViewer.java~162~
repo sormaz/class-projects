@@ -1,0 +1,84 @@
+package edu.ohiou.imse.ise589;
+/*
+ * Class: ISE589 - Spring 2004
+ * Student: MIHNEA ANGHELESCU
+ * Title: PROJECT 4
+ */
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import edu.ohiou.labimp.basis.*;
+
+public  class DrawingViewer extends ViewObject {
+  Vector vector = new Vector(3);
+  JList ListOfObjects;
+  JButton nButton, sButton, dButton;
+
+  public void add(Object object) {
+    vector.addElement(object);
+  }
+  public void delete(int i) {
+    vector.removeElementAt(i);
+  }
+  public String toString() {
+    return("The collection") ;
+  }
+  public class DrawingViewerPanel extends JPanel {
+    public DrawingViewerPanel() {
+        setLayout(new BorderLayout());
+        add(new JLabel("DrawingViewer"), BorderLayout.NORTH);
+        ListOfObjects = new JList(vector);
+        add(new JScrollPane(ListOfObjects,
+                                  ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                                  ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS),
+                  BorderLayout.CENTER);
+        JToolBar ToolBar = new JToolBar();
+        add(ToolBar, BorderLayout.SOUTH);
+        nButton = new JButton("New");
+        ToolBar.add(nButton);
+        sButton = new JButton("Show");
+        ToolBar.add(sButton);
+        dButton = new JButton("Delete");
+        ToolBar.add(dButton);
+        nButton.addActionListener(new nButtonListener());
+        sButton.addActionListener(new nButtonListener());
+        dButton.addActionListener(new dButtonListener());
+        ListOfObjects.addMouseListener(new jListListener());
+    }
+  }
+  public void init() {
+    panel = new DrawingViewerPanel();
+  }
+  class nButtonListener implements ActionListener {
+    public void actionPerformed (ActionEvent action) {
+      DrawDialog dialog = new DrawDialog(SwingUtilities.getWindowAncestor(panel));
+      dialog.setBounds(0,0,400,400);
+      dialog.show();
+    }
+  }
+  class sButtonListener implements ActionListener {
+    public void actionPerformed (ActionEvent action) {
+      DrawObject object = (DrawObject) vector.elementAt(ListOfObjects.getSelectedIndex());
+      object.display();
+    }
+  }
+  class dButtonListener implements ActionListener {
+    public void actionPerformed (ActionEvent action) {
+      int i=ListOfObjects.getSelectedIndex();
+      vector.removeElementAt(i);
+      panel.updateUI();
+    }
+  }
+  class jListListener extends MouseAdapter {
+    public void mouseClicked (MouseEvent mouse) {
+      if (mouse.getClickCount() == 2) {
+        DrawObject object = (DrawObject) vector.elementAt(ListOfObjects.getSelectedIndex());
+        object.display();
+      }
+    }
+  }
+  class MyListener implements ActionListener {
+    public void actionPerformed (ActionEvent action);
+  }
+}

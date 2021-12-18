@@ -1,0 +1,14 @@
+package edu.ohiou.imse.ise589;
+
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import edu.ohiou.labimp.basis.*;
+
+public abstract class MyListener extends MouseAdapter implements ActionListener {
+  public void mouseClicked (MouseEvent me) {
+    if (me.getClickCount()==2)
+      actionPerformed (new ActionEvent (sButton,0,null));
+  }
+  }

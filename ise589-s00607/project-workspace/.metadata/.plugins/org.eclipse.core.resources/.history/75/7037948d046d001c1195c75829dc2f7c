@@ -1,0 +1,60 @@
+package edu.ohiou.ise.ise589;
+
+import java.awt.Image;
+import java.util.*;
+import javax.swing.*;
+//import edu.ohiou.labimp.basis.*;
+
+public class DrawViewer /*extends ViewObject*/ {
+	
+	private List<DrawObject> objects;
+	
+	public DrawViewer () {
+		objects = new ArrayList<DrawObject> ();	
+	}
+	
+	public boolean addObject (DrawObject o) {
+		
+		return objects.add(o);
+		
+	}
+	
+	public void deleteObject (DrawObject o) {
+		
+	}
+	
+	public void deleteObject (int index) {
+		
+	}
+	
+	public DrawObject findObject (int index) {
+		return objects.get(index);
+	}
+	
+	public int indexOf (DrawObject o) {
+		return objects.indexOf(o);
+	}
+	
+	public String toString() {
+	 return "DrawViewer contains " + objects.size() + " objects";
+	}
+	
+	public void listObjects () {
+		System.out.println(toString());
+		int i = 1;
+		for ( Iterator itr = objects.iterator(); itr.hasNext();) {
+			System.out.println("" + i++ + ": " +itr.next().toString());
+		}
+	}
+	
+	public void init () {
+		panel = new JPanel();
+		ImageIcon icon = new ImageIcon(this.getClass().getResource("processplan-3dim.jpg"));
+		panel.add(new JLabel(icon));
+	}
+	
+	public static void main (String [] args) {
+		DrawViewer v = new DrawViewer();
+		v.display();
+	}
+}

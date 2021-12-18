@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="debug.0" name="SmartStepRedefineClasses" value="0"/>
+  <property category="debug.1" name="SmartStepRedefineClasses" value="0"/>
+  <property category="debug.2" name="SmartStepRedefineClasses" value="0"/>
+  <property category="debug.3" name="SmartStepRedefineClasses" value="0"/>
+  <property category="java" name="compiler" value="hostjavac"/>
+  <property category="runtime" name="ConfigurationCount" value="3"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.0" name="ConfigurationName" value="MailbocxTest"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="edu.ohiou.imse.ise589.MailboxTest"/>
+  <property category="runtime.1" name="ConfigurationName" value="AnimationApplet"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.AppletRunner"/>
+  <property category="runtime.1" name="applet.class" value="edu.ohiou.imse.ise589.AnimationApplet"/>
+  <property category="runtime.2" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.2" name="ConfigurationName" value="Mailbox"/>
+  <property category="runtime.2" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.2" name="application.class" value="edu.ohiou.imse.ise589.Mailbox"/>
+  <property category="runtime.3" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.3" name="ConfigurationName" value="Copy of Mailbox"/>
+  <property category="runtime.3" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.3" name="application.class" value="edu.ohiou.imse.ise589.Mailbox"/>
+  <property category="runtime.3" name="application.parameters" value="fff"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value="Ohio University"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2003"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="JDK" value="java version 1.5.0_07-b03"/>
+  <property category="sys" name="JvmVersion" value="1.4"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="corejava;impclasses-localLib;java3d-localLib;animLib;imp-localLib;java3dLib;labimp-basic"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value="ise 589 project for messge center, spring 02/03"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <file path="classes/AnimationApplet.html"/>
+  <file path="ise589spring0203.html"/>
+</project>

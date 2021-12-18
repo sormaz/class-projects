@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable 'argument' in 'p2.CommandInterfaceClass.main(...)' to 'myArg'&#13;&#10;- Original element: 'p2.CommandInterfaceClass.main(String[]).argument'&#13;&#10;- Renamed element: 'p2.CommandInterfaceClass.main(String[]).myArg'&#13;&#10;- Update references to refactored element" description="Rename local variable 'argument'" id="org.eclipse.jdt.ui.rename.local.variable" input="/&lt;p2{CommandInterfaceClass.java" name="myArg" references="true" selection="1210 8" stamp="1176472615218" version="1.0"/>
+</session>

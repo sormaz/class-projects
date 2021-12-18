@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="edu/ohiou/imse/ise589/ise660-ns-project2/src/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/corejavaProject"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/labimp-basis"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/labimp-extend"/>
+	<classpathentry kind="lib" path="C:/java-lib/java3d/j3dcore.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/java3d/j3dutils.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/java3d/vecmath.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

@@ -1,0 +1,35 @@
+package edu.ohiou.imse.ise589;
+
+/**
+ * Title:
+ * Description:
+ * Copyright:    Copyright (c) 2002
+ * Company:
+ * @author
+ * @version 1.0
+ */
+
+public class TextMessage extends Message {
+
+  public TextMessage(String sender, String content) {
+    super (sender);
+    this.content=content;
+  }
+
+  public void init() {
+    panel = new MessagePanel(this);
+  }
+
+  public void play() { System.out.println(content); }
+
+  public String getContent () {
+    return content;
+  }
+
+  public void setContent (String inContent) {
+    content = inContent;
+  }
+
+  String content;
+}
+

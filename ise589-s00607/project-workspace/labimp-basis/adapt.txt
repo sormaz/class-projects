@@ -1,0 +1,88 @@
+	class Draw2DCanvasGraphMouseAdapter extends MouseInputAdapter {
+		Draw2DPanel.Draw2DCanvas adaptee;
+		Draw2DPanel canvas = null;
+		Draw2DCanvasGraphMouseAdapter(Draw2DPanel.Draw2DCanvas adaptee) {
+			this.adaptee = adaptee;
+		}
+
+		Draw2DCanvasGraphMouseAdapter() {
+		}
+
+		public void mousePressed(MouseEvent e) {
+			//     try
+			//     {
+			//      Point2D.Double mousePoint = new Point2D.Double(e.getX(),e.getY());
+			//      xForm.inverseTransform(mousePoint,mousePoint);
+			//      temp.setNodeLocation(mousePoint.x,mousePoint.y);
+			//      }
+			//      catch(Exception ex)
+			//      {
+			//        ex.printStackTrace();
+			//      }
+		}
+
+		public void mouseClicked(MouseEvent e) {
+		}
+
+		public void mouseMoved(MouseEvent e) {
+			//      System.out.println("i am in mouse moved of DefaultGraphModel");
+			Iterator allNodes = nodeList.iterator();
+			Point2D.Double mousePoint = new Point2D.Double(e.getX(), e.getY());
+			Point2D.Double newPoint = new Point2D.Double();
+			try {
+				//     temp = (DefaultGraphNode)allNodes.next();
+				canvas = (Draw2DPanel) DefaultGraphModel.this.getCanvas();
+				Draw2DPanel.Draw2DCanvas drawCanvas = canvas.getDrawCanvas();
+				xForm = new AffineTransform(canvas.getViewTransform());
+
+				xForm.preConcatenate(AffineTransform.getTranslateInstance(
+					drawCanvas.getWidth() / 2,
+					drawCanvas.getHeight() / 2));
+
+				xForm.inverseTransform(mousePoint, newPoint);
+
+				pointLabel.setText("M"
+					+ mousePoint.toString()
+					+ ", w "
+					+ newPoint.toString());
+				TreeSet ts = new TreeSet(new NodeDistanceComparator(newPoint));
+				ts.addAll(nodeList);
+				ts.add(startNode);
+				ts.add(endNode);
+				temp = (DefaultGraphNode) ts.first();
+				//      System.out.println("the mouse mode before setting is "+canvas.getMouseMode());
+				if (newPoint.distance(((DefaultGraphNode) ts.first())
+					.getNodeLocation()) < GraphConstants.RADIUS) {
+					drawCanvas.setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
+					canvas.setMouseMode(Drawable2D.MODIFY_TARGET);
+					canvas.setToolTipText(temp.getUserObject().toString());
+				} else {
+					drawCanvas.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+					canvas.setMouseMode(Drawable2D.MODIFY_VIEW);
+					canvas.resetToolTipText();
+					temp = null;
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+
+		public void mouseDragged(MouseEvent e) {
+			//     canvas = (Draw2DPanel)DefaultGraphModel.this.getCanvas();
+			if (canvas.getMouseMode() == Drawable2D.MODIFY_TARGET) {
+				if (temp != null) {
+					//        temp.setNodeLocation(e.getPoint().getX(),e.getPoint().getY());
+					try {
+						Point2D.Double mousePoint = new Point2D.Double(
+							e.getX(),
+							e.getY());
+						xForm.inverseTransform(mousePoint, mousePoint);
+						temp.setNodeLocation(mousePoint.x, mousePoint.y);
+					} catch (Exception ex) {
+						ex.printStackTrace();
+					}
+					repaint();
+				}
+			}
+		}
+	}

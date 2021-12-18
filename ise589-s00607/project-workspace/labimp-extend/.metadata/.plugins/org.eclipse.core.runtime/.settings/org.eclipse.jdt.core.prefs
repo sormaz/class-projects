@@ -1,0 +1,12 @@
+#Mon Jul 31 23:08:04 GMT-05:00 2006
+org.eclipse.jdt.core.userLibrary.java3d=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="1">\r\n\t<archive path\="J\:/user/labimp/java-lib/java3d/j3daudio.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/java3d/j3dcore.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/java3d/j3dutils.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/java3d/vecmath.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.compiler.compliance=1.5
+org.eclipse.jdt.core.userLibrary.vrml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="1">\r\n\t<archive path\="J\:/user/labimp/java-lib/vrmlloader-lib/cv97r140.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.5
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch
+eclipse.preferences.version=1
+org.eclipse.jdt.core.userLibrary.saxxml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="1">\r\n\t<archive path\="J\:/user/labimp/java-lib/xml/crimson.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/xml/jaxp.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/xml/parser.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/xml/xalan.jar"/>\r\n\t<archive path\="J\:/user/labimp/java-lib/xml/xerces.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.compiler.source=1.5
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error

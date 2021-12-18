@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>
+HTML Test Page
+</title>
+</head>
+<body>
+edu.ohiou.imse.ise589.AnimationApplet will appear below in a Java enabled browser.<br>
+<applet
+  codebase = "."
+  code     = "edu.ohiou.imse.ise589.AnimationApplet.class"
+  name     = "TestApplet"
+  width    = "600"
+  height   = "600"
+  hspace   = "0"
+  vspace   = "0"
+  align    = "middle"
+>
+<param name = "INCREMENT" value = "1">
+</applet>
+</body>
+</html>

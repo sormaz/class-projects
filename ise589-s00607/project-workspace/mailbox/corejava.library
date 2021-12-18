@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>corejava</fullname>
+  <class>
+    <path>../corejavaProject</path>
+  </class>
+  <source>
+    <path>../</path>
+    <path>src</path>
+  </source>
+  <lastmodsaved>1165503872421</lastmodsaved>
+</library>

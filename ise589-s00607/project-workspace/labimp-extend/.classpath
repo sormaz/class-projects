@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/labimp-basis"/>
+	<classpathentry kind="lib" path="C:/java-lib/vrmlloader-lib/cv97r140.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/java3d/j3dcore.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/java3d/j3dutils.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/java3d/vecmath.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/jess/jess.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/jess/jsr94.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

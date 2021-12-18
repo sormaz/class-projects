@@ -1,0 +1,20 @@
+circle
+1 2 4
+circle
+2 5 8
+square
+3 9 3
+image
+2 3 .5 processplan-3dim.jpg
+image
+4 6 .25 example.jpeg
+star
+2 3 5 7 
+triangle
+3 4 5 7
+rectangle
+3 6 5 7 
+printout
+4
+list
+quit

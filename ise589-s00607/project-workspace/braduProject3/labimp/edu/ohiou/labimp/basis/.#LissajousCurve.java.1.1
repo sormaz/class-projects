@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package edu.ohiou.labimp.basis;
+
+import edu.ohiou.labimp.basis.ViewObject;
+import java.util.LinkedList;
+import java.awt.geom.*;
+import java.awt.BorderLayout;
+import javax.swing.*;
+
+/**
+ * @author Dusan Sormaz
+ *
+ */
+public class LissajousCurve extends ViewObject {
+	
+	double a = 5, b=5, omega = 1.5, delta =.5;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LissajousCurve lc = new LissajousCurve();
+		lc.setApplet(new Draw2DApplet(lc));
+		lc.display();
+
+	}
+	
+	public String toString() {
+		return "LissajousCurve: a="+a+", b="+b+", o="+omega+", d="+ delta;
+	}
+	
+	public void init () {
+		panel = new JPanel ();
+		panel.setLayout(new BorderLayout());
+		panel.add(new JLabel (toString()));
+	}
+	
+	public LinkedList getDrawList () {
+		LinkedList shapes = new LinkedList ();
+		double oldX, oldY, x, y;
+		double epsilon = 0.01;
+		double t=0;
+		oldX = a* Math.sin(omega * t + delta);
+		oldY = b * Math.sin(t);
+		for (int i = 1; i< 1000; i++) {
+
+			t += epsilon;
+			x = a* Math.sin(omega * t + delta);
+			y = b * Math.sin(t);
+			shapes.add(new Line2D.Double(oldX, oldY, x, y));
+			oldX = x;
+			oldY=y;
+		}
+		return shapes;
+		
+	}
+
+}

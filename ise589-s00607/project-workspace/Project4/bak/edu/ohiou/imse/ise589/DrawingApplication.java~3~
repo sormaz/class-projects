@@ -1,0 +1,109 @@
+package edu.ohiou.imse.ise589;
+/*
+ * Class: ISE589 - Spring 2004
+ * Student: MIHNEA ANGHELESCU
+ * Title: PROJECT 3
+ */
+import java.io.*;
+import java.text.*;
+import java.util.*;
+import javax.swing.*;
+import corejava.*;
+import edu.ohiou.labimp.basis.*;
+import java.awt.*;
+
+public class DrawingApplication {
+  public static final int TRIANGLE = 1;
+  public static final int CIRCLE = 2;
+  public static final int STAR = 3;
+  public static int ctr=0;
+  public static void main(String args []) {
+    DrawingViewer viewer = new DrawingViewer();
+    viewer.display();
+    while(true){
+      String cmd = Console.readLine("Enter C to Create, D to Delete, P to Print, S to draw an object or L to List & Q to quit");
+      if(cmd.equalsIgnoreCase("C")) {
+        System.out.println("The following objects are available to be created:");
+        System.out.println("1. Triangle");
+        System.out.println("2. Circle");
+        System.out.println("3. Star");
+        int choice;
+        choice = Console.readInt("Choose the object you want to create:");
+        switch (choice) {
+          case TRIANGLE:
+            System.out.println("You have chosen: Triangle");
+            double xt1 = Console.readDouble("Enter the x coordinate of the first corner: ");
+            double yt1 = Console.readDouble("Enter the y coordinate of the first corner: ");
+            double xt2 = Console.readDouble("Enter the x coordinate of the second corner: ");
+            double yt2 = Console.readDouble("Enter the y coordinate of the second corner: ");
+            double xt3 = Console.readDouble("Enter the x coordinate of the third corner: ");
+            double yt3 = Console.readDouble("Enter the y coordinate of the third corner: ");
+            Triangle triangle = new Triangle( xt1, yt1, xt2, yt2, xt3, yt3);
+            triangle.printout();
+            viewer.add(triangle);
+            break;
+          case CIRCLE:
+            System.out.println("You have chosen: Circle");
+            double xc1 = Console.readDouble("Enter the x coordinate of the center: ");
+            double yc1 = Console.readDouble("Enter the y coordinate of the center: ");
+            double rad = Console.readDouble("Enter the radius: ");
+            Circle circle = new Circle(xc1,yc1,rad);
+            circle.printout();
+            viewer.add(circle);
+            break;
+          case STAR:
+            System.out.println("You have chosen: Star");
+            double xs1=Console.readDouble("Enter the x coordinate of the first corner: ");
+            double ys1=Console.readDouble("Enter the y coordinate of the first corner: ");
+            double xs2=Console.readDouble("Enter the x coordinate of the second corner: ");
+            double ys2=Console.readDouble("Enter the y coordinate of the second corner: ");
+            double xs3=Console.readDouble("Enter the x coordinate of the third corner: ");
+            double ys3=Console.readDouble("Enter the y coordinate of the third corner: ");
+            double xs4=Console.readDouble("Enter the x coordinate of the fourth corner: ");
+            double ys4=Console.readDouble("Enter the y coordinate of the fourth corner: ");
+            double xs5=Console.readDouble("Enter the x coordinate of the fifth corner: ");
+            double ys5=Console.readDouble("Enter the y coordinate of the fifth corner: ");
+            Star star = new Star(xs1,ys1,xs2,ys2,xs3,ys3,xs4,ys4,xs5,ys5);
+            star.printout();
+            viewer.add(star);
+            break;
+          default:
+            System.out.println("WRONG CHOICE");
+            break;
+        }
+        viewer.setApplet(null);
+        viewer.setApplet();
+        viewer.display();
+      }
+      else if (cmd.equalsIgnoreCase("D")) {
+        int i = Console.readInt("Enter the index of the object to be deleted: ");
+        DrawObject dobj = (DrawObject) viewer.vector.get(i);
+        dobj.printout();
+        viewer.delete(i);
+        viewer.getApplet().destroy();
+        viewer.setApplet(null);
+        viewer.setApplet();
+        viewer.display();
+      }
+      else if (cmd.equalsIgnoreCase("L")) {
+        System.out.println("This is the list of the objects in collection: ");
+        for (int i = 0; i < viewer.vector.size(); i++) {
+          System.out.println(viewer.vector.elementAt(i));
+        }
+      }
+      else if (cmd.equalsIgnoreCase("P")) {
+        int i = Console.readInt("Eneter the index of the object to be printed: ");
+        DrawObject dobj = (DrawObject) viewer.vector.get(i);
+        dobj.printout();
+      }
+      else if (cmd.equalsIgnoreCase("S")) {
+        int i = Console.readInt("Eneter the object to be drawn: ");
+        DrawObject dobj = (DrawObject) viewer.vector.get(i);
+        dobj.display(dobj.getClass().getName(),dobj.getAppletSize(),JFrame.DISPOSE_ON_CLOSE);
+      }
+      else if (cmd.equalsIgnoreCase("Q")) {
+        System.out.close();
+      }
+    }
+  }
+}

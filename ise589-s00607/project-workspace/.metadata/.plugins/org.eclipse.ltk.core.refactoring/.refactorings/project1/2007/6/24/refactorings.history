@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename type 'p2.DrawableWFClass' to 'OldDrawableWFClass'&#13;&#10;- Original element: 'p2.DrawableWFClass'&#13;&#10;- Renamed element: 'p2.OldDrawableWFClass'&#13;&#10;- Update references to refactored element&#13;&#10;- Update textual occurrences in comments and strings" description="Rename type 'DrawableWFClass'" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/&lt;p2{DrawableWFClass.java[DrawableWFClass" matchStrategy="1" name="OldDrawableWFClass" qualified="false" references="true" similarDeclarations="false" stamp="1181760942890" textual="false" version="1.0"/>
+</session>
